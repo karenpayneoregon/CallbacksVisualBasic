@@ -1,8 +1,8 @@
 ﻿Imports FollowParent.Classes
+Imports FollowParent.Modules
 
 Public Class ChildForm
 
-    Public Delegate Sub FormMessageHandler(sender As Object, args As FormMessageArgs)
     Public Event OnMessageInformationChanged As FormMessageHandler
 
     Private Sub cmdClose_Click(sender As Object, e As EventArgs) Handles cmdClose.Click

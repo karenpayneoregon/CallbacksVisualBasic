@@ -1,4 +1,5 @@
 ﻿Imports FollowParent.Classes
+Imports FollowParent.Modules
 
 Public Class Form1
 
@@ -7,28 +8,24 @@ Public Class Form1
     Private _childForm As ChildForm
     Private _firstTime As Boolean = True
 
-    ''' <summary>
-    ''' This delegate is used to shorten a line of code
-    ''' in GetNewPerson, otherwise the predicate would be in
-    ''' GetNewPerson.
-    ''' </summary>
-    ''' <param name="Person">Person from child form</param>
-    ''' <returns></returns>
-    Delegate Function ValidPerson(Person As Person) As Boolean
-
     ' Anonymous method
     Public PersonValid As ValidPerson =
-               Function(person As Person)
-                   Return Not String.IsNullOrWhiteSpace(person.FirstName) AndAlso
-                          Not String.IsNullOrWhiteSpace(person.LastName)
+               Function(person1 As Person, person2 As Person)
+                   Return Not String.IsNullOrWhiteSpace(person1.FirstName) AndAlso
+                          Not String.IsNullOrWhiteSpace(person1.LastName) AndAlso
+                          person1.FirstName = person2.FirstName AndAlso
+                          person1.LastName = person2.LastName
                End Function
 
-    Private Sub ShowChildFormButton_Click(sender As Object, e As EventArgs) Handles ShowChildFormButton.Click
+    Private Sub ShowChildFormButton_Click(sender As Object, e As EventArgs) _
+        Handles ShowChildFormButton.Click
+
         DisplayChildForm()
+
     End Sub
     Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-        If _ChildForm IsNot Nothing Then
-            _ChildForm.Dispose()
+        If _childForm IsNot Nothing Then
+            _childForm.Dispose()
         End If
     End Sub
     Private Sub DisplayChildForm()
@@ -69,7 +66,7 @@ Public Class Form1
     Private Sub GetNewPerson(sender As Object, args As FormMessageArgs)
         Dim people = CType(_bindingSource.DataSource, List(Of Person))
 
-        If people.FirstOrDefault(Function(p) PersonValid(p)) Is Nothing Then
+        If people.FirstOrDefault(Function(p) PersonValid(p, args.Person)) Is Nothing Then
             _bindingSource.Add(args.Person)
         Else
             MessageBox.Show($"{args.Person} exists.")
@@ -82,8 +79,11 @@ Public Class Form1
             _ChildForm.Location = New Point(Left + (Width + 10), Top + 5)
         End If
     End Sub
-    Private Sub ExitApplicationButton_Click(sender As Object, e As EventArgs) Handles ExitApplicationButton.Click
+    Private Sub ExitApplicationButton_Click(sender As Object, e As EventArgs) _
+        Handles ExitApplicationButton.Click
+
         Close()
+
     End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 

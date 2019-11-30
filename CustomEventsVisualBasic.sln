@@ -14,6 +14,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ReadingDelimitedFile2", "Re
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FollowParent", "FollowParent\FollowParent.vbproj", "{83A3C1FC-7D8A-4E23-A8EC-D91476B3954D}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FormCommunicate1", "FormCommunicate1\FormCommunicate1.vbproj", "{E6CAE5EC-766A-4517-B110-55780EEDAE37}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{83A3C1FC-7D8A-4E23-A8EC-D91476B3954D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83A3C1FC-7D8A-4E23-A8EC-D91476B3954D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83A3C1FC-7D8A-4E23-A8EC-D91476B3954D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6CAE5EC-766A-4517-B110-55780EEDAE37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6CAE5EC-766A-4517-B110-55780EEDAE37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6CAE5EC-766A-4517-B110-55780EEDAE37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6CAE5EC-766A-4517-B110-55780EEDAE37}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
