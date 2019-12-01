@@ -1,5 +1,4 @@
 ﻿Imports ReadingDelimitedFile2.Classes
-
 Namespace Modules
     Public Module DelegatesModule
         Public Delegate Sub FileHandler(sender As Object, args As LineArgs)

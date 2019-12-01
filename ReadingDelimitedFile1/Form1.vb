@@ -1,8 +1,13 @@
 ﻿Imports System.IO
 Public Class Form1
-    Private FileName As String = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data.txt")
-    Private Sub ReadFileButton_Click(sender As Object, e As EventArgs) Handles ReadFileButton.Click
+    Private FileName As String = Path.Combine(
+        AppDomain.CurrentDomain.BaseDirectory, "Data.txt")
+
+    Private Sub ReadFileButton_Click(sender As Object, e As EventArgs) _
+        Handles ReadFileButton.Click
+
         ReadFileAndPopulateDataGridView()
+
     End Sub
     Private Async Sub ReadFileAndPopulateDataGridView()
         Dim lineIndex = 1
