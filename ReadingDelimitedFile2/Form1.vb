@@ -1,12 +1,12 @@
 ﻿Imports System.IO
-Imports System.Net.NetworkInformation
 Imports ReadingDelimitedFile2.Classes
 
 Public Class Form1
     ''' <summary>
     ''' Exiting file to read
     ''' </summary>
-    Private ReadOnly _fileName As String = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data.txt")
+    Private ReadOnly _fileName As String = Path.Combine(
+        AppDomain.CurrentDomain.BaseDirectory, "Data.txt")
 
     Private _operations As New FileOperation
 
@@ -25,7 +25,8 @@ Public Class Form1
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Async Sub ReadFileButton_Click(sender As Object, e As EventArgs) Handles ReadFileButton.Click
+    Private Async Sub ReadFileButton_Click(sender As Object, e As EventArgs) _
+        Handles ReadFileButton.Click
 
         _emptyLineCount = 0
         _emptyLineList = New List(Of Integer)()
@@ -52,8 +53,10 @@ Public Class Form1
     ''' <param name="args"></param>
     Private Sub EmptyLineRead(sender As Object, args As EmptyLineArgs)
         _emptyLineCount += 1
+
         EmptyLinesLabel.Text = _emptyLineCount.ToString()
         _emptyLineList.Add(args.RowIndex)
+
     End Sub
 
     ''' <summary>
@@ -71,14 +74,22 @@ Public Class Form1
         End If
 
     End Sub
-    Private Sub ExitApplicationButton_Click(sender As Object, e As EventArgs) Handles ExitApplicationButton.Click
+    Private Sub ExitApplicationButton_Click(sender As Object, e As EventArgs) _
+        Handles ExitApplicationButton.Click
+
         Close()
+
     End Sub
-    Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+    Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) _
+        Handles Me.FormClosing
+
         _operations.CancelRead = True
+
     End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         StatusLabel.Text = ""
         EmptyLinesLabel.Text = ""
+
     End Sub
 End Class

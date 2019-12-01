@@ -1,25 +1,24 @@
 ﻿Imports System.IO
-
 Public Class Form1
     Private FileName As String = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data.txt")
     Private Sub ReadFileButton_Click(sender As Object, e As EventArgs) Handles ReadFileButton.Click
         ReadFileAndPopulateDataGridView()
     End Sub
     Private Async Sub ReadFileAndPopulateDataGridView()
-        Dim index = 1
+        Dim lineIndex = 1
 
-        Dim Row As String
+        Dim currentLine As String
 
         Using reader As StreamReader = File.OpenText(FileName)
 
             While Not reader.EndOfStream
 
-
                 Await Task.Delay(10)
 
-                Row = Await reader.ReadLineAsync()
-                StatusLabel.Text = $"Reading line {index}"
-                Dim parts = Row.Split(","c)
+                currentLine = Await reader.ReadLineAsync()
+                StatusLabel.Text = $"Reading line {lineIndex}"
+
+                Dim parts = currentLine.Split(","c)
 
                 Dim person = New Person With
                         {
@@ -35,9 +34,23 @@ Public Class Form1
 
                 DataGridView1.Rows.Add(person.FieldArray())
 
-                index += 1
+                lineIndex += 1
 
             End While
         End Using
+
     End Sub
+End Class
+Public Class Person
+    Public Property FirstName As String
+    Public Property MiddleName As String
+    Public Property LastName As String
+    Public Property Street() As String
+    Public Property City As String
+    Public Property State As String
+    Public Property PostalCode As String
+    Public Property EmailAddress As String
+    Public Function FieldArray() As String()
+        Return New String() {FirstName, MiddleName, LastName, Street, City, State, PostalCode, EmailAddress}
+    End Function
 End Class

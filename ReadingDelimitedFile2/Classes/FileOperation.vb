@@ -1,19 +1,18 @@
 ﻿Imports System.IO
+Imports ReadingDelimitedFile2.Modules
+
 Namespace Classes
     Public Class FileOperation
-        Public Delegate Sub FileHandler(sender As Object, args As LineArgs)
+
         ''' <summary>
         ''' Event for reporting progress and passing a just read Person
         ''' to the calling form for adding to a DataGridView
         ''' </summary>
         Public Event OnLineRead As FileHandler
-
-        Public Delegate Sub EmptyLineHandler(sender As Object, args As EmptyLineArgs)
         ''' <summary>
         ''' Event for monitoring empty lines
         ''' </summary>
         Public Event OnEmptyLineRead As EmptyLineHandler
-
         ''' <summary>
         ''' Provides ability to cancel a read operation
         ''' </summary>
