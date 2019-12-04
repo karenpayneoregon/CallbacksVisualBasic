@@ -5,7 +5,6 @@ Public Class Form1
 
     Private Async Function AsyncMethod(progress As IProgress(Of Integer), ct As CancellationToken) As Task
 
-
         For index As Integer = 0 To 20
             'Simulate an async call that takes some time to complete
             Await Task.Delay(500)
@@ -13,16 +12,19 @@ Public Class Form1
             If ct.IsCancellationRequested Then
                 ct.ThrowIfCancellationRequested()
             End If
+
             'Report progress
             If progress IsNot Nothing Then
                 progress.Report(index)
             End If
+
         Next
+
     End Function
 
     Private Async Sub StartButton_Click(sender As Object, e As EventArgs) Handles StartButton.Click
         '
-        ' Reset
+        ' Reset if needed, if was ran and cancelled before
         '
         If _cts.IsCancellationRequested = True Then
             _cts.Dispose()
@@ -48,6 +50,5 @@ Public Class Form1
     Private Sub ReportProgress(ByVal value As Integer)
         lblStatus.Text = value.ToString()
     End Sub
-
 
 End Class
