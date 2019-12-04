@@ -16,6 +16,10 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FollowParent", "FollowParen
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FormCommunicate1", "FormCommunicate1\FormCommunicate1.vbproj", "{E6CAE5EC-766A-4517-B110-55780EEDAE37}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Progress1", "Progress1\Progress1.vbproj", "{2626DCE1-9428-46D3-9AB8-759648ABBB85}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Progress2", "Progress2\Progress2.vbproj", "{4EAAD1E4-D25C-46D4-AAB7-14646D346BED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +42,14 @@ Global
 		{E6CAE5EC-766A-4517-B110-55780EEDAE37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6CAE5EC-766A-4517-B110-55780EEDAE37}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6CAE5EC-766A-4517-B110-55780EEDAE37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2626DCE1-9428-46D3-9AB8-759648ABBB85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2626DCE1-9428-46D3-9AB8-759648ABBB85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2626DCE1-9428-46D3-9AB8-759648ABBB85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2626DCE1-9428-46D3-9AB8-759648ABBB85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EAAD1E4-D25C-46D4-AAB7-14646D346BED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EAAD1E4-D25C-46D4-AAB7-14646D346BED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EAAD1E4-D25C-46D4-AAB7-14646D346BED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EAAD1E4-D25C-46D4-AAB7-14646D346BED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
