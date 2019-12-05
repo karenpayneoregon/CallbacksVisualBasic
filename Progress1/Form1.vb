@@ -22,7 +22,7 @@ Public Class Form1
                                {
                                    .CurrentProgressAmount = currentIterator,
                                    .TotalProgressAmount = totalAmount,
-                                   .CurrentProgressMessage = $"On {currentIterator} Message"
+                                   .CurrentProgressMessage = $"Current message: {currentIterator}"
                                })
 
             currentIterator += delay
@@ -31,9 +31,6 @@ Public Class Form1
     End Function
     Private Sub ReportProgress(progress As TaskProgressReport)
         StatusLabel.Text = progress.CurrentProgressMessage
-        ProgressTextBox.Text = $"{progress.CurrentProgressAmount} out of {progress.TotalProgressAmount}"
+        ProgressTextBox.Text = $"{progress.CurrentProgressAmount} of {progress.TotalProgressAmount}"
     End Sub
-
-
-
 End Class

@@ -47,7 +47,7 @@ Public Class Form1
     Private Sub CancelButton_Click(sender As Object, e As EventArgs) Handles CancelButton.Click
         _cts.Cancel()
     End Sub
-    Private Sub ReportProgress(ByVal value As Integer)
+    Private Sub ReportProgress(value As Integer)
         lblStatus.Text = value.ToString()
     End Sub
 

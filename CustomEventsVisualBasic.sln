@@ -20,6 +20,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Progress1", "Progress1\Prog
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Progress2", "Progress2\Progress2.vbproj", "{4EAAD1E4-D25C-46D4-AAB7-14646D346BED}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Progress3", "Progress3\Progress3.vbproj", "{5411A35C-601C-46C7-9452-4B65B233DFF1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,10 @@ Global
 		{4EAAD1E4-D25C-46D4-AAB7-14646D346BED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4EAAD1E4-D25C-46D4-AAB7-14646D346BED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4EAAD1E4-D25C-46D4-AAB7-14646D346BED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5411A35C-601C-46C7-9452-4B65B233DFF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5411A35C-601C-46C7-9452-4B65B233DFF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5411A35C-601C-46C7-9452-4B65B233DFF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5411A35C-601C-46C7-9452-4B65B233DFF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

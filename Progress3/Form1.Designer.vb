@@ -22,54 +22,56 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.StatusLabel = New System.Windows.Forms.Label()
-        Me.ProgressTextBox = New System.Windows.Forms.TextBox()
+        Me.lblStatus = New System.Windows.Forms.Label()
         Me.StartButton = New System.Windows.Forms.Button()
+        Me.CancelButton = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'StatusLabel
+        'lblStatus
         '
-        Me.StatusLabel.AutoSize = True
-        Me.StatusLabel.Location = New System.Drawing.Point(21, 44)
-        Me.StatusLabel.Name = "StatusLabel"
-        Me.StatusLabel.Size = New System.Drawing.Size(37, 13)
-        Me.StatusLabel.TabIndex = 0
-        Me.StatusLabel.Text = "Status"
-        '
-        'ProgressTextBox
-        '
-        Me.ProgressTextBox.Location = New System.Drawing.Point(23, 13)
-        Me.ProgressTextBox.Name = "ProgressTextBox"
-        Me.ProgressTextBox.Size = New System.Drawing.Size(209, 20)
-        Me.ProgressTextBox.TabIndex = 1
+        Me.lblStatus.AutoSize = True
+        Me.lblStatus.Location = New System.Drawing.Point(12, 9)
+        Me.lblStatus.Name = "lblStatus"
+        Me.lblStatus.Size = New System.Drawing.Size(39, 13)
+        Me.lblStatus.TabIndex = 0
+        Me.lblStatus.Text = "Label1"
         '
         'StartButton
         '
-        Me.StartButton.Location = New System.Drawing.Point(157, 39)
+        Me.StartButton.Location = New System.Drawing.Point(15, 39)
         Me.StartButton.Name = "StartButton"
         Me.StartButton.Size = New System.Drawing.Size(75, 23)
-        Me.StartButton.TabIndex = 2
+        Me.StartButton.TabIndex = 1
         Me.StartButton.Text = "Start"
         Me.StartButton.UseVisualStyleBackColor = True
+        '
+        'CancelButton
+        '
+        Me.CancelButton.Location = New System.Drawing.Point(96, 39)
+        Me.CancelButton.Name = "CancelButton"
+        Me.CancelButton.Size = New System.Drawing.Size(75, 23)
+        Me.CancelButton.TabIndex = 2
+        Me.CancelButton.Text = "Cancel"
+        Me.CancelButton.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(255, 99)
+        Me.ClientSize = New System.Drawing.Size(554, 94)
+        Me.Controls.Add(Me.CancelButton)
         Me.Controls.Add(Me.StartButton)
-        Me.Controls.Add(Me.ProgressTextBox)
-        Me.Controls.Add(Me.StatusLabel)
+        Me.Controls.Add(Me.lblStatus)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Progress Example"
+        Me.Text = "Progress 3 (final)"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents StatusLabel As Label
-    Friend WithEvents ProgressTextBox As TextBox
+    Friend WithEvents lblStatus As Label
     Friend WithEvents StartButton As Button
+    Friend WithEvents CancelButton As Button
 End Class
