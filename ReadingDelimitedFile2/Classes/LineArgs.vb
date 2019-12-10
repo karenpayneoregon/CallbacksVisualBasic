@@ -8,16 +8,16 @@
         ''' <summary>
         ''' Sets current row index and read in Person
         ''' </summary>
-        ''' <param name="RowIndex">Current line index</param>
-        ''' <param name="Person">Person object</param>
-        Public Sub New(RowIndex As Integer, Person As Person)
-            _index = RowIndex
-            _person = Person
+        ''' <param name="rowIndex">Current line index</param>
+        ''' <param name="person">Person object</param>
+        Public Sub New(rowIndex As Integer, person As Person)
+            _index = rowIndex
+            _person = person
         End Sub
         ''' <summary>
         ''' Current read line index
         ''' </summary>
-        ''' <returns></returns>
+        ''' <returns>Integer representing the line index</returns>
         Public ReadOnly Property RowIndex() As Integer
             Get
                 Return _index
