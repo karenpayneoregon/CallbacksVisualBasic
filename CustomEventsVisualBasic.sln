@@ -24,6 +24,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Progress3", "Progress3\Prog
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "PassingValuesConventional", "PassingValuesConventional\PassingValuesConventional.vbproj", "{7AF01B50-8480-4A68-A9B1-7D8586094A5E}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "PassingValuesConventional1", "PassingValuesConventional1\PassingValuesConventional1.vbproj", "{F4B2B5B2-B23C-4771-A4B3-4D5478981967}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -62,6 +64,10 @@ Global
 		{7AF01B50-8480-4A68-A9B1-7D8586094A5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AF01B50-8480-4A68-A9B1-7D8586094A5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AF01B50-8480-4A68-A9B1-7D8586094A5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4B2B5B2-B23C-4771-A4B3-4D5478981967}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4B2B5B2-B23C-4771-A4B3-4D5478981967}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4B2B5B2-B23C-4771-A4B3-4D5478981967}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4B2B5B2-B23C-4771-A4B3-4D5478981967}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

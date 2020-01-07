@@ -1,5 +1,4 @@
 ﻿Imports PassingValuesConventional.Classes
-
 Public Class ChildForm
     Private _person As New Person
     Public ReadOnly Property Person() As Person
