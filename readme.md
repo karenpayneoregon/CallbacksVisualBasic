@@ -4,7 +4,7 @@ Microsoft TechNet article: [Article location](https://social.technet.microsoft.c
 
 ### Code sneak preview
 
-```
+```php
 Imports Progress1.Classes
 
 Public Class Form1
@@ -54,46 +54,22 @@ Public Class Form1
     End Sub
 End Class
 ```
-```
+```php
 Imports System.IO
 Imports ReadingDelimitedFile2.Modules
 
 Namespace Classes
     Public Class FileOperation
 
-        ''' <summary>
-        ''' Event for reporting progress and passing a just read Person
-        ''' to the calling form for adding to a DataGridView
-        ''' </summary>
         Public Event OnLineRead As FileHandler
-        ''' <summary>
-        ''' Event for monitoring empty lines
-        ''' </summary>
         Public Event OnEmptyLineRead As EmptyLineHandler
-        ''' <summary>
-        ''' Provides ability to cancel a read operation
-        ''' </summary>
-        ''' <returns></returns>
         Public Property CancelRead() As Boolean
-        ''' <summary>
-        ''' File name to read from disk
-        ''' </summary>
         Private FileName As String
-        ''' <summary>
-        ''' Allows creating an instance of this class at form level
-        ''' </summary>
         Public Sub New()
         End Sub
-        ''' <summary>
-        ''' Creates a new instance ready to use with the file to read
-        ''' </summary>
-        ''' <param name="fileToRead"></param>
         Public Sub New(fileToRead As String)
             FileName = fileToRead
         End Sub
-        ''' <summary>
-        ''' Read a comma delimited file with a callback
-        ''' </summary>
         Public Async Function ReadFileAndPopulateDataGridView() As Task
             Dim currentLineIndex = 1
 
