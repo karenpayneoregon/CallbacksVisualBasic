@@ -4,7 +4,7 @@ Microsoft TechNet article: [Article location](https://social.technet.microsoft.c
 
 ### Code sneak preview
 
-```php
+```csharp
 Imports Progress1.Classes
 
 Public Class Form1
