@@ -54,7 +54,7 @@ Public Class Form1
     End Sub
 End Class
 ```
-```php
+```csharp
 Imports System.IO
 Imports ReadingDelimitedFile2.Modules
 
