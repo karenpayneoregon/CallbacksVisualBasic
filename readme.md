@@ -4,7 +4,7 @@ Microsoft TechNet article: [Article location](https://social.technet.microsoft.c
 
 ### Code sneak preview
 
-```csharp
+```
 Imports Progress1.Classes
 
 Public Class Form1
@@ -54,7 +54,7 @@ Public Class Form1
     End Sub
 End Class
 ```
-```csharp
+```
 Imports System.IO
 Imports ReadingDelimitedFile2.Modules
 
