@@ -1,6 +1,6 @@
 ﻿Public Class Form2
-    Public Sub MessageReceived(sender As Boolean, e As EventArgs)
-        Timer1.Enabled = sender
+    Public Sub MessageReceived(enabled As Boolean, e As EventArgs)
+        Timer1.Enabled = enabled
     End Sub
 
     Private _countDownTime As TimeSpan

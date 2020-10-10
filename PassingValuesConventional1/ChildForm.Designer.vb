@@ -65,7 +65,6 @@ Partial Class ChildForm
         '
         'CloseButton
         '
-        Me.CloseButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.CloseButton.Location = New System.Drawing.Point(65, 120)
         Me.CloseButton.Name = "CloseButton"
         Me.CloseButton.Size = New System.Drawing.Size(127, 23)

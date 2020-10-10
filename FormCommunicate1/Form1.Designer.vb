@@ -42,7 +42,7 @@ Partial Class Form1
         Me.StartStopTimerButton.Name = "StartStopTimerButton"
         Me.StartStopTimerButton.Size = New System.Drawing.Size(110, 23)
         Me.StartStopTimerButton.TabIndex = 1
-        Me.StartStopTimerButton.Text = "Start/stop Timer"
+        Me.StartStopTimerButton.Text = "Start"
         Me.StartStopTimerButton.UseVisualStyleBackColor = True
         '
         'EnabledCheckBox
