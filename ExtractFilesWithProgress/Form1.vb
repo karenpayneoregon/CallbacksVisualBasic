@@ -18,8 +18,7 @@ Public Class Form1
     ''' in a different context.
     ''' </summary>
     Public Event ZipEventHandler As ZipEventHandler
-    Public Event ZipExceptionsHandler As ZipExceptions
-
+    Public Event ZipEventExceptionsHandler As ZipExceptions
 
     Private _extractedCount As Integer = 0
 
@@ -28,8 +27,7 @@ Public Class Form1
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub SelectZipFileButton_Click(sender As Object, e As EventArgs) _
-        Handles SelectZipFileButton.Click
+    Private Sub SelectZipFileButton_Click(sender As Object, e As EventArgs) Handles SelectZipFileButton.Click
 
         If SelectZipFileDialog.ShowDialog() = DialogResult.OK Then
             CompressionFileNameTextBox.Text = SelectZipFileDialog.FileName
@@ -41,8 +39,7 @@ Public Class Form1
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub SelectFolderButton_Click(sender As Object, e As EventArgs) _
-        Handles SelectFolderButton.Click
+    Private Sub SelectFolderButton_Click(sender As Object, e As EventArgs) Handles SelectFolderButton.Click
 
         If Not String.IsNullOrWhiteSpace(CompressionFileNameTextBox.Text) Then
             If ExtractFolderBrowser.ShowDialog(Me) = DialogResult.OK Then
@@ -172,7 +169,7 @@ Public Class Form1
 
                             Catch ioex As IOException
 
-                                RaiseEvent ZipExceptionsHandler(ioex.Message)
+                                RaiseEvent ZipEventExceptionsHandler(ioex.Message)
                                 '
                                 ' By removing the logic above for File.Exists an exception
                                 ' would be thrown. To get around this the file must first
@@ -190,7 +187,7 @@ Public Class Form1
                                 ' Should not be ignored, for a production app
                                 ' consider writing to a log file
                                 '
-                                RaiseEvent ZipExceptionsHandler(ex.Message)
+                                RaiseEvent ZipEventExceptionsHandler(ex.Message)
                                 _errorCount += 1
 
                             End Try
@@ -245,7 +242,7 @@ Public Class Form1
             MessageBox.Show($"Extracted {_extractedCount} files.{Environment.NewLine}Skipped: {_skipCount}{Environment.NewLine}Error count: {_errorCount}")
         End If
     End Sub
-    Private Sub ZipExceptionHandler(sender As String) Handles Me.ZipExceptionsHandler
+    Private Sub ZipExceptionHandler(sender As String) Handles Me.ZipEventExceptionsHandler
         Invoke(Sub() ExceptionsListBox.Items.Add(sender))
     End Sub
 
@@ -279,10 +276,6 @@ Public Class Form1
         Else
             MessageBox.Show("Please select a folder first")
         End If
-
-    End Sub
-
-    Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ExtractListBox.SelectedIndexChanged
 
     End Sub
 End Class
