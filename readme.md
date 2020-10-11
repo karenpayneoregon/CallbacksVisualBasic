@@ -1,7 +1,22 @@
-# Using delegares code samples in VB.NET
+# Using delegates code samples in VB.NET
+
+Developers tend to visualize a project as a series of procedures and functions that execute in a given sequence, in reality these programs are event driven meaning the flow of execution is determined by occurrences called events.
+
+An [event](https://docs.microsoft.com/en-us/dotnet/visual-basic/programming-guide/language-features/events/) is triggered by something that was expected to occur such as a user clicking a button which raises a Click event which has code to perform one or more actions or calls a method to perform one or more actions. Think of events similar to the radio or TV broadcaster, an event would be a signal to tell you that a show is starting or a signal to tell your DVR that it is time to start recording. Your DVR would listen for a “show is about to begin” event and choose whether or not to do anything in response to it. Put this together with a [delegate](https://docs.microsoft.com/en-us/dotnet/visual-basic/programming-guide/language-features/delegates/) and an event notifies subscribers that something happened by calling on the delegate to tell them about it.
 
 Microsoft TechNet article: [Article location](https://social.technet.microsoft.com/wiki/contents/articles/53470.vb-net-windows-forms-custom-delegates-and-events.aspx)
 
+### Delegates Overview
+
+#### Delegates have the following properties:
+
+- Delegates are similar to C++ function pointers, but are type safe.
+- Delegates allow methods to be passed as parameters.
+- Delegates can be used to define callback methods.
+- Delegates can be chained together; for example, multiple methods can be called on a single event.
+- Methods don't need to match the delegate signature exactly. For more information, see Covariance and Contra variance.
+- C# version 2.0 introduces the concept of Anonymous Methods, which permit code blocks to be passed as parameters in place of a separately defined method.
+ 
 ### Code sneak preview
 
 ```csharp
@@ -132,9 +147,14 @@ Besides working with delegates and events there are plenty of other things to le
 
 # See also
 
-GitHub repositories
+#### GitHub repositories
 - [Working with files better](https://github.com/karenpayneoregon/file-read-tips-vb) (uses delegates and events)
 [Async basics](https://github.com/karenpayneoregon/async-basics-vb)
 - [Visual Basic getting started](https://github.com/karenpayneoregon/visual-basic-getting-started) (a work in progress)
+- [VB.NET: Invoke Method to update UI from secondary threads](https://social.technet.microsoft.com/wiki/contents/articles/33280.vb-net-invoke-method-to-update-ui-from-secondary-threads.aspx) (not mine) *source code not available*.
+
+#### Other references
+
+- [Delegates](https://social.technet.microsoft.com/wiki/contents/articles/12785.delegates.aspx) bullet points
 
 

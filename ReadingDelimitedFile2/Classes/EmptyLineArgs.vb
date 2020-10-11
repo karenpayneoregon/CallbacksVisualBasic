@@ -3,8 +3,8 @@
         Inherits EventArgs
 
         Protected _index As Integer
-        Public Sub New(RowIndex As Integer)
-            _index = RowIndex
+        Public Sub New(rowIndex As Integer)
+            _index = rowIndex
         End Sub
         ''' <summary>
         ''' Current read line index
