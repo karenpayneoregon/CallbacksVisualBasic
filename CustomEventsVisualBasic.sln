@@ -50,6 +50,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "BuilderPatternExample", "Bu
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DeleteFileOnClose", "DeleteFileOnClose\DeleteFileOnClose.vbproj", "{E4E65BDC-F4BF-4ED9-9ED9-A254678EDCE6}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ExtractFilesWithProgress", "ExtractFilesWithProgress\ExtractFilesWithProgress.vbproj", "{F8B7BAE5-85C1-420D-A70A-E38F90F1C8B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -132,6 +134,10 @@ Global
 		{E4E65BDC-F4BF-4ED9-9ED9-A254678EDCE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4E65BDC-F4BF-4ED9-9ED9-A254678EDCE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4E65BDC-F4BF-4ED9-9ED9-A254678EDCE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8B7BAE5-85C1-420D-A70A-E38F90F1C8B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8B7BAE5-85C1-420D-A70A-E38F90F1C8B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8B7BAE5-85C1-420D-A70A-E38F90F1C8B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8B7BAE5-85C1-420D-A70A-E38F90F1C8B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -156,6 +162,7 @@ Global
 		{46A2D1D8-FD6F-4EB7-8A15-888B79C2C834} = {2EE864E2-2B2C-43C1-BB68-DA2FC11906B5}
 		{6D32054B-88DF-47D7-A48B-0A618702C53A} = {2EE864E2-2B2C-43C1-BB68-DA2FC11906B5}
 		{E4E65BDC-F4BF-4ED9-9ED9-A254678EDCE6} = {2EE864E2-2B2C-43C1-BB68-DA2FC11906B5}
+		{F8B7BAE5-85C1-420D-A70A-E38F90F1C8B0} = {2EE864E2-2B2C-43C1-BB68-DA2FC11906B5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5F13DA23-703F-4661-AA22-C5D4EE912237}
