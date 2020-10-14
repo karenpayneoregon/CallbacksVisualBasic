@@ -26,7 +26,7 @@ Public Class Form1
         '
         ' Reset if needed, if was ran and cancelled before
         '
-        If _cts.IsCancellationRequested = True Then
+        If _cts.IsCancellationRequested Then
             _cts.Dispose()
             _cts = New CancellationTokenSource()
         End If
